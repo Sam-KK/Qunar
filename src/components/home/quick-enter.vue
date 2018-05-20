@@ -50,7 +50,10 @@ export default {
 
     .category-enter {
         .swiper-container {
-            padding-bottom: 20px
+            padding-bottom: 20px;
+            .swiper-pagination {
+                bottom: 0;
+            }
         }
     }
 

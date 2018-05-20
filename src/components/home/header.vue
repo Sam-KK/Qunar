@@ -9,12 +9,12 @@
                 <span class="placeholder">输入城市/景点/游玩主题</span>
             </a>
         </div>
-        <div class="home-city">
-            <a href="">
+        <!--<div class="home-city">-->
+            <router-link tag="div" to="/city" class="home-city">
                 <span>{{ city }}</span>
                 <i class="iconfont icon-xiajiantou"></i>
-            </a>
-        </div>
+            </router-link>
+        <!--</div>-->
     </div>
 </template>
 
@@ -57,12 +57,10 @@ export default {
             }
         }
         .home-city {
-            width: 72px;
+            width: 48px;
             line-height: 44px;
-            a {
-                padding: 0 12px;
-                color: #fff;
-            }
+            padding: 0 12px;
+            color: #fff;
         }
     }
 </style>

@@ -3,8 +3,17 @@
  * User: wind
  * DateTime: 2018/5/19 20:39
  **/
+
+/* 文本省略号 */
 .ellipsis {
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+}
+
+// Box sizing
+.box-sizing(@boxmodel) {
+    -webkit-box-sizing: @boxmodel;
+    -moz-box-sizing: @boxmodel;
+    box-sizing: @boxmodel;
 }
