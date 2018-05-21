@@ -8,6 +8,7 @@
                         <img
                             :src="item.imgUrl"
                             alt="">
+                        <span v-if="item.tag" class="tag">{{ item.tag  }}</span>
                     </div>
                     <div class="like-info">
                         <div class="like-title">{{ item.title }}</div>
@@ -44,7 +45,9 @@
 export default {
     name: 'homeRecommend',
     props: {
-        list: Array
+        list: Array,
+        any: '',
+        tom: ''
     }
 }
 </script>
@@ -72,15 +75,33 @@ export default {
             .like-item {
                 position: relative;
                 padding: 10px 0;
+                border-bottom: 1px solid #e0e0e0;
                 .full-link {
                     display: block;
                     .like-img {
+                        position: relative;
                         float: left;
                         width: 100px;
                         height: 100px;
                         img {
                             display: block;
                             width: 100%;
+                        }
+                        .tag {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            padding: 2px 4px;
+                            font-size: 10px;
+                            color: #fff;
+                            background: #f00;
+                            border-radius: 0 0 8px 0;
+                            &.tom {
+                                background: #000;
+                            }
+                            &.any {
+                                background: #f00;
+                            }
                         }
                     }
                     .like-info {

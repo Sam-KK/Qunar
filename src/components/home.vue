@@ -5,6 +5,7 @@
         <div class="container">
             <v-swiper :list="swiperList"></v-swiper>
             <v-quickEnter :list="quickEnterList"></v-quickEnter>
+            <v-hotWeek :hotSwiper="hotSwiper"></v-hotWeek>
             <v-recommend :list="recommendList"></v-recommend>
             <v-weekend :list="weekendList"></v-weekend>
         </div>
@@ -16,6 +17,7 @@ import axios from 'axios'
 import header from '@/components/home/header'
 import homeSwiper from '@/components/home/swiper'
 import quickEnter from '@/components/home/quick-enter'
+import hotSwiper from '@/components/home/hotWeek'
 import Recommend from '@/components/home/recommend'
 import weekend from '@/components/home/weekend'
 export default {
@@ -24,6 +26,7 @@ export default {
         'v-header': header,
         'v-swiper': homeSwiper,
         'v-quickEnter': quickEnter,
+        'v-hotWeek': hotSwiper,
         'v-recommend': Recommend,
         'v-weekend': weekend
     },
@@ -32,6 +35,7 @@ export default {
             city: '',
             swiperList: [],
             quickEnterList: [],
+            hotSwiper: [],
             recommendList: [],
             weekendList: []
         }
@@ -44,9 +48,9 @@ export default {
                 this.city = res.city
                 this.swiperList = res.swiperList
                 this.quickEnterList = res.quickEnterList
+                this.hotSwiper = res.hotSwiper
                 this.recommendList = res.recommendList
                 this.weekendList = res.weekendList
-                console.log(this.city)
             }
         })
     }
