@@ -1,0 +1,252 @@
+{
+    "ret": true,
+    "data": {
+        "city": "北京",
+        "swiperList": [
+            {
+                "id": 0,
+                "imgUrl": "http://img1.qunarzz.com/piao/fusion/1805/77/f63bd04dd5319602.jpg_750x200_6ba8e0ca.jpg"
+            },
+            {
+                "id": 1,
+                "imgUrl": "http://img1.qunarzz.com/piao/fusion/1804/c4/1cdd28811593b802.jpg_750x200_5fbb7c91.jpg"
+            },
+            {
+                "id": 2,
+                "imgUrl": "http://img1.qunarzz.com/piao/fusion/1804/f2/91b285a08ee21c02.jpg_750x200_8a73fd08.jpg"
+            },
+            {
+                "id": 3,
+                "imgUrl": "http://img1.qunarzz.com/piao/fusion/1804/d1/2ba49f4f21ed2102.jpg_750x200_79e641ad.jpg"
+            },
+            {
+                "id": 4,
+                "imgUrl": "http://img1.qunarzz.com/piao/fusion/1805/e5/59fad13a64807d02.jpg_750x200_713ae984.jpg"
+            },
+            {
+                "id": 5,
+                "imgUrl": "http://img1.qunarzz.com/piao/fusion/1805/1d/1c9e5e2759f1e02.jpg_750x200_b7ff6974.jpg"
+            },
+            {
+                "id": 6,
+                "imgUrl": "http://img1.qunarzz.com/piao/fusion/1805/e4/d1086d4c5671aa02.jpg_750x200_60e211cd.jpg"
+            }
+        ],
+        "quickEnterList": [
+            {
+                "id": 0,
+                "imgUrl": "http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png",
+                "keywords": "景点门票"
+            },
+            {
+                "id": 1,
+                "imgUrl": "http://img1.qunarzz.com/piao/fusion/1804/5a/13ceb38dcf262f02.png",
+                "keywords": "一日游"
+            },
+            {
+                "id": 2,
+                "imgUrl": "http://img1.qunarzz.com/piao/fusion/1804/ff/fdf170ee89594b02.png",
+                "keywords": "必游榜单"
+            },
+            {
+                "id": 3,
+                "imgUrl": "http://img1.qunarzz.com/piao/fusion/1803/76/eb88861d78fb9902.png",
+                "keywords": "动植物园"
+            },
+            {
+                "id": 4,
+                "imgUrl": "http://img1.qunarzz.com/piao/fusion/1803/bd/9f7b9b2b60c1502.png",
+                "keywords": "踏青赏花"
+            },
+            {
+                "id": 5,
+                "imgUrl": "http://img1.qunarzz.com/piao/fusion/1803/b6/37560ece9c62b502.png",
+                "keywords": "城市观光"
+            },
+            {
+                "id": 6,
+                "imgUrl": "http://img1.qunarzz.com/piao/fusion/1803/b1/528a9e80403b8c02.png",
+                "keywords": "上海欢乐谷"
+            },
+            {
+                "id": 7,
+                "imgUrl": "http://img1.qunarzz.com/piao/fusion/1804/ed/cf572be30fc32f02.png",
+                "keywords": "Q+精选"
+            },
+            {
+                "id": 8,
+                "imgUrl": "http://img1.qunarzz.com/piao/fusion/1803/de/f26be47a6bf02a02.png",
+                "keywords": "上海迪士尼"
+            },
+            {
+                "id": 9,
+                "imgUrl": "http://img1.qunarzz.com/piao/fusion/1803/80/416c6ab3368d1f02.png",
+                "keywords": "上海迪士尼"
+            }
+        ],
+        "hotSwiper": [
+            {
+                "id": 1,
+                "tagUrl": "http://img1.qunarzz.com/piao/fusion/1710/ab/159673b63e6ca702.png",
+                "imgUrl": "http://img1.qunarzz.com/sight/p0/1803/1a/1aac2b1dd96b36ba3.water.jpg_150x150_edd4b21c.jpg",
+                "sight": "上海欢乐谷",
+                "price": "59"
+            }, {
+                "id": 2,
+                "tagUrl": "http://img1.qunarzz.com/piao/fusion/1710/2d/36d0c4adaebbbc02.png",
+                "imgUrl": "http://img1.qunarzz.com/sight/p0/1607/7c/7cda8b6782dabd80b4.img.jpg_150x150_8156d2ff.jpg",
+                "sight": "上海迪士尼乐园",
+                "price": "259"
+            }, {
+                "id": 3,
+                "tagUrl": "http://img1.qunarzz.com/piao/fusion/1710/67/edc47ffef9e96b02.png",
+                "imgUrl": "http://img1.qunarzz.com/tuan/team2/1507/2c/83e0e0e7ae082a.jpg_150x150_90f7eeef.jpg",
+                "sight": "东方明珠",
+                "price": "128"
+            }, {
+                "id": 4,
+                "imgUrl": "http://img1.qunarzz.com/sight/p0/1603/17/170481fb9caf500790.water.jpg_150x150_1b331280.jpg",
+                "sight": "上海野生动物园",
+                "price": "59.7"
+            }, {
+                "id": 5,
+                "imgUrl": "http://img1.qunarzz.com/sight/p0/1704/c9/c936f3fccfc6d7eda3.img.jpg_150x150_58302249.jpg",
+                "sight": "上海杜莎夫人蜡像馆",
+                "price": "130"
+            }, {
+                "id": 6,
+                "imgUrl": "http://img1.qunarzz.com/sight/p0/201407/03/0fecc57b14cf94dde413aa08f1a4719a.jpg_150x150_a0459fee.jpg",
+                "sight": "黄浦江游船",
+                "price": "56"
+            }, {
+                "id": 7,
+                "imgUrl": "http://img1.qunarzz.com/sight/p0/1603/9b/9bf694a468dd774490.water.jpg_150x150_7211be01.jpg",
+                "sight": "上海动物园",
+                "price": "37.5"
+            }, {
+                "id": 8,
+                "imgUrl": "http://img1.qunarzz.com/sight/p0/1802/b9/b995f17d885c97a4a3.water.jpg_150x150_dd5373dd.jpg",
+                "sight": "上海长风海洋世界",
+                "price": "79"
+            }, {
+                "id": 9,
+                "imgUrl": "http://img1.qunarzz.com/sight/p0/1502/ba/ba5f873a22327e0f.water.jpg_150x150_dda11aca.jpg",
+                "sight": "上海影视乐园",
+                "price": "60.9"
+            }, {
+                "id": 10,
+                "imgUrl": "http://img1.qunarzz.com/sight/p0/1412/9f/fbff2a5302c0ce906ef9b64159730f89.water.jpg_150x150_e0ad3151.jpg",
+                "sight": "上海海洋水族馆",
+                "price": "103"
+            }
+        ],
+        "recommendList": [
+            {
+                "id": 0,
+                "imgUrl": "http://img1.qunarzz.com/sight/p0/1506/30/7a528fae12c17e6e29d5d13a9d9813ee.water.jpg_200x200_e7f0d0ad.jpg",
+                "title": "上海玛雅海滩水公园",
+                "commentNum": 4928,
+                "price": 59,
+                "address": "佘山国家"
+            },
+            {
+                "id": 1,
+                "imgUrl": "http://img1.qunarzz.com/sight/p0/1607/7c/7cda8b6782dabd80b4.img.jpg_200x200_2039e660.jpg",
+                "type": "随买随用",
+                "title": "上海迪士尼乐园",
+                "commentNum": 148884,
+                "price": 260,
+                "address": "浦东新区",
+                "feature": "好评如潮，小伙伴热推景点~"
+            },
+            {
+                "id": 2,
+                "imgUrl": "http://img1.qunarzz.com/sight/p0/1603/17/170481fb9caf500790.water.jpg_200x200_a32b9a92.jpg",
+                "type": "随买随用",
+                "title": "上海野生动物园",
+                "commentNum": 30466,
+                "price": 53,
+                "address": "浦东新区",
+                "feature": "与野生动物近距离的“亲密接触”"
+            },
+            {
+                "id": 3,
+                "imgUrl": "http://img1.qunarzz.com/sight/p0/1507/b3/b33a7caa457c0a52.img.jpg_200x200_fe73bd81.jpg",
+                "type": "随买随用",
+                "title": "东方明珠空中旋转餐厅",
+                "commentNum": 793,
+                "price": 338,
+                "address": "东方明珠"
+            },
+            {
+                "id": 4,
+                "imgUrl": "http://img1.qunarzz.com/sight/p0/1802/b9/b995f17d885c97a4a3.water.jpg_200x200_a85fccc7.jpg",
+                "type": "随买随用",
+                "title": "上海长风海洋世界",
+                "commentNum": 3927,
+                "price": 79,
+                "address": "普陀区"
+            },
+            {
+                "id": 5,
+                "imgUrl": "http://img1.qunarzz.com/sight/p0/1412/9f/fbff2a5302c0ce906ef9b64159730f89.water.jpg_200x200_87806940.jpg",
+                "type": "随买随用",
+                "title": "上海海洋水族馆",
+                "commentNum": 11289,
+                "price": 103,
+                "address": "浦东新区"
+            },
+            {
+                "id": 6,
+                "imgUrl": "http://img1.qunarzz.com/tuan/team2/1507/2c/83e0e0e7ae082a.jpg_200x200_6d7378b2.jpg",
+                "type": "随买随用",
+                "title": "东方明珠",
+                "commentNum": 50082,
+                "price": 128,
+                "address": "浦东新区"
+            },
+            {
+                "id": 7,
+                "imgUrl": "http://img1.qunarzz.com/sight/p0/1502/ba/ba5f873a22327e0f.water.jpg_200x200_9bf5cc14.jpg",
+                "type": "随买随用",
+                "title": "上海影视乐园",
+                "commentNum": 4192,
+                "price": 61,
+                "address": "松江区",
+                "feature": "真实艺术地展现上海的历史风貌和人文景观"
+            }
+        ],
+        "weekendList": [
+            {
+                "id": 0,
+                "imgUrl": "http://img1.qunarzz.com/sight/source/1505/7d/df6ff468331c43.jpg_r_640x214_1f3783d0.jpg",
+                "name": "上海必游TOP10",
+                "desc": "中西合璧，现代和传统各有各的精彩"
+            },
+            {
+                "id": 1,
+                "imgUrl": "http://img1.qunarzz.com/sight/source/1603/ad/69b0fc5f48ad5f.jpg_r_640x214_b0fd5c7b.jpg",
+                "name": "亲子时光TOP10",
+                "desc": "走进自然或玩转乐园，感知大千世界"
+            },
+            {
+                "id": 2,
+                "imgUrl": "http://img1.qunarzz.com/sight/source/1511/1d/fe098e8cfec117.jpg_r_640x214_a9be292a.jpg",
+                "name": "上海城市观光",
+                "desc": "来这里寻找你所认识的上海"
+            },
+            {
+                "id": 3,
+                "imgUrl": "http://img1.qunarzz.com/sight/source/1505/7b/2a6b0ce087f0e5.jpg_r_640x214_5c76b115.jpg",
+                "name": "情迷博物馆",
+                "desc": "穿梭时光"
+            },
+            {
+                "id": 4,
+                "imgUrl": "http://img1.qunarzz.com/sight/source/1505/b7/2f4621a3a4e12c.jpg_r_640x214_d55c10ba.jpg",
+                "name": "学生最爱TOP10",
+                "desc": "学习之余最爱玩耍，爱玩的你不可错过"
+            }
+        ]
+    }
+}

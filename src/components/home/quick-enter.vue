@@ -49,6 +49,7 @@ export default {
     @import "~styles/mixins.less";
 
     .category-enter {
+        background: #fff;
         .swiper-container {
             padding-bottom: 20px;
             .swiper-pagination {

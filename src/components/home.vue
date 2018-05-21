@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="main-page">
         <v-header :city="city"></v-header>
 
         <div class="container">
@@ -58,5 +58,7 @@ export default {
 </script>
 
 <style lang="less" scoped>
-
+.main-page {
+    background: #f5f5f5;
+}
 </style>

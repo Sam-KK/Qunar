@@ -1,17 +1,19 @@
 <template>
     <div class="hot-week">
-        <div>本周热门榜单</div>
+        <div class="title">本周热门榜单</div>
         <swiper :options="swiperOption" v-if="showSwiper">
             <swiper-slide v-for="item in hotSwiper" :key="item.id">
                 <div class="img-box">
+                    <div class="tag-box">
+                        <img :src="item.tagUrl" alt="">
+                    </div>
                     <img class="swiper-img" :src="item.imgUrl" alt="">
                 </div>
                 <div class="info">
-                    <p>{{ item.sight }}</p>
-                    <span>￥<em>{{ item.price }}起</em></span>
+                    <p class="sight">{{ item.sight }}</p>
+                    <p class="price"><em class="mpg-price">￥{{ item.price }}</em>起</p>
                 </div>
             </swiper-slide>
-            <div class="swiper-pagination"  slot="pagination"></div>
         </swiper>
     </div>
 </template>
@@ -25,8 +27,7 @@ export default {
     data() {
         return {
             swiperOption: {
-                slidesPerView: 3.5,
-                pagination: '.swiper-pagination'
+                slidesPerView: 3.5
             }
         }
     },
@@ -42,20 +43,48 @@ export default {
     @import "~styles/variables.less";
     @import "~styles/mixins.less";
     .hot-week {
-        padding: 0 14px;
+        margin-top: 12px;
+        padding: 0 14px 10px;
+        background: #fff;
+        .title {
+            position: relative;
+            padding: 12px 14px;
+        }
         .img-box {
+            position: relative;
             width: 100px;
             height: 100px;
-            img {
+            .tag-box {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 42px;
+                img {
+                    display: block;
+                    width: 100%;
+                }
+            }
+            .swiper-img {
                 width: 100%;
             }
         }
         .info {
             margin-top: 12px;
-            p {
+            width: 100px;
+            .sight {
                 font-size: 12px;
                 text-align: center;
+                line-height: 16px;
                 .ellipsis();
+            }
+            .price {
+                color: #616161;
+                font-size: 12px;
+                line-height: 18px;
+                text-align: center;
+                .mpg-price {
+                    color: #ff8300;
+                }
             }
         }
     }
