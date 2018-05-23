@@ -3,11 +3,11 @@
         <div class="city-container">
             <h2 class="title">当前城市</h2>
             <ul class="current-list">
-                <li>北京</li>
+                <li>{{ this.$store.state.city }}</li>
             </ul>
             <h2 class="title">热门城市</h2>
             <ul class="mp-list mp-tr3">
-                <li v-for="item in hot" :key="item.id">
+                <li v-for="item in hot" :key="item.id" @click="selectCity(item.name)">
                     {{ item.name }}
                 </li>
             </ul>
@@ -20,7 +20,7 @@
             <div class="character-item" v-for="(value, key) in cities" :key="key">
                 <h2 class="title">{{ key }}</h2>
                 <ul class="mp-list mp-tr4">
-                    <li v-for="v in value" :key="v.id">
+                    <li v-for="v in value" :key="v.id" @click="selectCity(v.name)">
                         {{ v.name }}
                     </li>
                 </ul>
@@ -36,6 +36,13 @@ export default {
     props: {
         cities: Object,
         hot: Array
+    },
+    methods: {
+        selectCity(city) {
+            this.$store.dispatch('changeCity', city)
+            // 选择城市后跳转到首页
+            this.$router.push('/')
+        }
     },
     mounted() {
         this.scroll = new BScroll(this.$refs.wrapper)
@@ -78,6 +85,7 @@ export default {
         }
     }
     .mp-list {
+        z-index: 0;
         position: relative;
         clear: both;
         overflow: hidden;
@@ -101,6 +109,7 @@ export default {
                 left: 33.33%;
             }
             li {
+                z-index: 10;
                 width: 33.33%;
                 border-bottom: 1px solid #ddd;
             }

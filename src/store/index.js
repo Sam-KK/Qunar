@@ -13,6 +13,17 @@ Vue.use(Vuex)
 const store = new Vuex.Store({
     state: {
         city: '上海'
+    },
+    actions: {
+        changeCity(context, city) {
+            context.commit('changeCity', city)
+            // console.log(city)
+        }
+    },
+    mutations: {
+        changeCity(state, city) {
+            state.city = city
+        }
     }
 })
 

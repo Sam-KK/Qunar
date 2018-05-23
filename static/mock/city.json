@@ -10,13 +10,37 @@
             "spell": "shanghai",
             "name": "上海"
         }, {
-            "id": 47,
-            "spell": "xian",
-            "name": "西安"
-        }, {
             "id": 239,
             "spell": "sanya",
             "name": "三亚"
+        }, {
+            "id": "810001",
+            "spell": "xianggang",
+            "name": "香港"
+        }, {
+            "id": "330100",
+            "spell": "hangzhou",
+            "name": "杭州"
+        }, {
+            "id": "440100",
+            "spell": "guangzhou",
+            "name": "广州"
+        }, {
+            "id": "510100",
+            "spell": "chengdu",
+            "name": "成都"
+        }, {
+            "id": "440300",
+            "spell": "shenzhen",
+            "name": "深圳"
+        }, {
+            "id": "320500",
+            "spell": "suzhou",
+            "name": "苏州"
+        }, {
+            "id": 47,
+            "spell": "xian",
+            "name": "西安"
         }, {
             "id": 188,
             "spell": "lijiang",
@@ -25,6 +49,10 @@
             "id": 125,
             "spell": "guilin",
             "name": "桂林"
+        }, {
+            "id": "350200",
+            "spell": "xiamen",
+            "name": "厦门"
         }],
         "cities": {
             "A": [{

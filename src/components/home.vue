@@ -47,6 +47,7 @@ export default {
             res = res.data
             if (res.ret && res.data) {
                 res = res.data
+                console.log(res)
                 // this.city = res.city  // 去掉：:city="city" 使用Vuex
                 this.swiperList = res.swiperList
                 this.quickEnterList = res.quickEnterList

@@ -46,6 +46,7 @@ export default {
         }
         .home-input {
             flex: 1;
+            box-flex: 1;
             height: 30px;
             line-height: 30px;
             margin: 7px 0;
@@ -57,7 +58,6 @@ export default {
             }
         }
         .home-city {
-            width: 48px;
             line-height: 44px;
             padding: 0 12px;
             color: #fff;

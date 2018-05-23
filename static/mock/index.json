@@ -1,7 +1,6 @@
 {
     "ret": true,
     "data": {
-        // "city": "北京",   // 去掉：:city="city" 使用Vuex
         "swiperList": [
             {
                 "id": 0,

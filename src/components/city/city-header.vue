@@ -9,9 +9,9 @@
         <div class="city-search">
             <input v-model="keyword" class="search-input" type="text" placeholder="输入城市名或拼音">
         </div>
-        <div class="search-container" ref="wrapper">
+        <div class="search-container" ref="wrapper" v-show="keyword">
             <ul class="search-box">
-                <li class="search-item" v-for="item in list" :key="item.id">{{ item.name }}</li>
+                <li class="search-item" v-for="item in list" :key="item.id" @click="selectCity(item.name)">{{ item.name }}</li>
                 <li class="search-item" v-show="notSearchData">暂无数据</li>
             </ul>
         </div>
@@ -42,6 +42,13 @@ export default {
             this.scroll = new BScroll(this.$refs.wrapper, {})
         })
     },
+    methods: {
+        selectCity(city) {
+            this.$store.dispatch('changeCity', city)
+            // 选择城市后跳转到首页
+            this.$router.push('/')
+        }
+    },
     watch: {
         keyword() {
             if (this.timer) {
@@ -61,7 +68,7 @@ export default {
                     })
                 }
                 this.list = result
-            })
+            }, 100)
         }
     }
 }
@@ -71,7 +78,6 @@ export default {
 @import "~styles/variables.less";
 @import "~styles/mixins.less";
 .city-header {
-    // position: relative;
     background: @headerColor;
     .head {
         position: relative;
