@@ -1,20 +1,69 @@
 <template>
     <div class="city-header">
         <div class="head">
-            <div class="return">
+            <router-link tag="div" to="/" class="return">
                 <i class="iconfont icon-fanhui"></i>
-            </div>
+            </router-link>
             <div class="title">城市选择</div>
         </div>
         <div class="city-search">
-            <input class="search-input" type="text" placeholder="输入城市名或拼音">
+            <input v-model="keyword" class="search-input" type="text" placeholder="输入城市名或拼音">
+        </div>
+        <div class="search-container" ref="wrapper">
+            <ul class="search-box">
+                <li class="search-item" v-for="item in list" :key="item.id">{{ item.name }}</li>
+                <li class="search-item" v-show="notSearchData">暂无数据</li>
+            </ul>
         </div>
     </div>
 </template>
 
 <script>
+import BScroll from 'better-scroll'
 export default {
-    name: 'city-header'
+    name: 'city-header',
+    props: {
+        cities: Object
+    },
+    data() {
+        return {
+            keyword: '',
+            list: [],
+            timer: null
+        }
+    },
+    computed: {
+        notSearchData() {
+            return !this.list.length
+        }
+    },
+    mounted() {
+        this.$nextTick(() => {
+            this.scroll = new BScroll(this.$refs.wrapper, {})
+        })
+    },
+    watch: {
+        keyword() {
+            if (this.timer) {
+                clearTimeout(this.timer)
+            }
+            if (!this.keyword) {
+                this.list = []
+                return
+            }
+            this.timer = setTimeout(() => {
+                const result = []
+                for (let i in this.cities) {
+                    this.cities[i].forEach((value) => {
+                        if (value.spell.indexOf(this.keyword) > -1 || value.name.indexOf(this.keyword) > -1) {
+                            result.push(value)
+                        }
+                    })
+                }
+                this.list = result
+            })
+        }
+    }
 }
 </script>
 
@@ -22,6 +71,7 @@ export default {
 @import "~styles/variables.less";
 @import "~styles/mixins.less";
 .city-header {
+    // position: relative;
     background: @headerColor;
     .head {
         position: relative;
@@ -61,6 +111,21 @@ export default {
             outline: none;
             box-shadow: none;
             .ellipsis();
+        }
+    }
+    .search-container {
+        z-index: 1;
+        overflow: hidden;
+        position: absolute;
+        top: 88px;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background: #f5f5f5;
+        .search-item {
+            padding: 12px 14px;
+            background: #fff;
+            border-bottom: 1px solid #ddd;
         }
     }
 }

@@ -1,6 +1,8 @@
 <template>
     <div class="main-page">
-        <v-header :city="city"></v-header>
+        <!-- 去掉：:city="city" 使用Vuex -->
+        <v-header></v-header>
+        <!-- <v-header :city="city"></v-header> -->
 
         <div class="container">
             <v-swiper :list="swiperList"></v-swiper>
@@ -32,7 +34,7 @@ export default {
     },
     data() {
         return {
-            city: '',
+            // city: '',  // 去掉：:city="city" 使用Vuex
             swiperList: [],
             quickEnterList: [],
             hotSwiper: [],
@@ -45,7 +47,7 @@ export default {
             res = res.data
             if (res.ret && res.data) {
                 res = res.data
-                this.city = res.city
+                // this.city = res.city  // 去掉：:city="city" 使用Vuex
                 this.swiperList = res.swiperList
                 this.quickEnterList = res.quickEnterList
                 this.hotSwiper = res.hotSwiper

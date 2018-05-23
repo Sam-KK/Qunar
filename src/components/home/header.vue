@@ -11,7 +11,7 @@
         </div>
         <!--<div class="home-city">-->
             <router-link tag="div" to="/city" class="home-city">
-                <span>{{ city }}</span>
+                <span>{{ this.$store.state.city }}</span>
                 <i class="iconfont icon-xiajiantou"></i>
             </router-link>
         <!--</div>-->
@@ -20,10 +20,10 @@
 
 <script>
 export default {
-    name: 'homeHeader',
-    props: {
-        city: String
-    }
+    name: 'homeHeader'
+    // props: {  // 去掉：:city="city" 使用Vuex
+    //     city: String
+    // }
 }
 </script>
 

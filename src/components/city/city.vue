@@ -1,6 +1,6 @@
 <template>
     <div class="city">
-        <v-cityheader></v-cityheader>
+        <v-cityheader :cities="cities"></v-cityheader>
         <v-cityList :cities="cities" :hot="hotCities"></v-cityList>
     </div>
 </template>
