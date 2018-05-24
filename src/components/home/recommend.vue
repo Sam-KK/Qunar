@@ -2,7 +2,7 @@
     <div class="recommend">
         <div class="title"><i class="iconfont icon-zan1"></i><span class="mp-title">猜你喜欢</span></div>
         <ul class="like-list">
-            <li class="like-item" v-for="item in list" :key="item.id">
+            <router-link tag="li" to="/detail" class="like-item" v-for="item in list" :key="item.id">
                 <a class="full-link" href="">
                     <div class="like-img">
                         <img
@@ -35,7 +35,7 @@
                         </div>
                     </div>
                 </a>
-            </li>
+            </router-link>
         </ul>
         <a class="like-more">查看所有产品</a>
     </div>
