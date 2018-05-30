@@ -1,8 +1,11 @@
 <template>
     <div class="recommend">
-        <div class="title"><i class="iconfont icon-zan1"></i><span class="mp-title">猜你喜欢</span></div>
+        <div class="title">
+            <i class="iconfont icon-zan1"></i>
+            <span class="mp-title">猜你喜欢</span>
+        </div>
         <ul class="like-list">
-            <router-link tag="li" to="/detail" class="like-item" v-for="item in list" :key="item.id">
+            <router-link tag="li" class="like-item" v-for="item in list" :key="item.id" :to="'/detail/' + item.id">
                 <a class="full-link" href="">
                     <div class="like-img">
                         <img

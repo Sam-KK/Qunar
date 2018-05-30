@@ -13,7 +13,7 @@ import 'swiper/dist/css/swiper.css'
 Vue.config.productionTip = false
 FastClick.attach(document.body)
 Vue.use(VueAwesomeSwiper)
-
+require('./assets/util/vconsole.js')
 /* eslint-disable no-new */
 new Vue({
     el: '#app',

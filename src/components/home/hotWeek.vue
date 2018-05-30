@@ -1,6 +1,9 @@
 <template>
     <div class="hot-week">
-        <div class="title">本周热门榜单</div>
+        <div class="title">
+            <i class="iconfont icon-icon-test"></i>
+            <span class="hot-title">本周热门榜单</span>
+        </div>
         <swiper :options="swiperOption" v-if="showSwiper">
             <swiper-slide v-for="item in hotSwiper" :key="item.id">
                 <div class="img-box">
@@ -48,7 +51,16 @@ export default {
         background: #fff;
         .title {
             position: relative;
-            padding: 12px 14px;
+            padding: 12px 0;
+            .hot-title,
+            .iconfont {
+                display: inline-block;
+                vertical-align: middle;
+            }
+            .iconfont {
+                color: #ff654d;
+                font-size: 20px;
+            }
         }
         .img-box {
             position: relative;

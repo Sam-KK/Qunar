@@ -37,6 +37,7 @@ export default {
 </script>
 <style lang="less" scoped="">
 .gallery {
+    z-index: 10;
     display: flex;
     flex-direction: column;
     justify-content: center;

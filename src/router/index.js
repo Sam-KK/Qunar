@@ -6,26 +6,25 @@ import Detail from '@/components/detail/detail'
 
 Vue.use(Router)
 
-const routes = [
-    {
-        path: '/',
-        name: 'home',
-        component: home
-    },
-    {
-        path: '/city',
-        name: 'city',
-        component: city
-    },
-    {
-        path: '/detail',
-        name: 'Detail',
-        component: Detail
+export default new Router({
+    routes: [
+        {
+            path: '/',
+            name: 'home',
+            component: home
+        },
+        {
+            path: '/city',
+            name: 'city',
+            component: city
+        },
+        {
+            path: '/detail/:id',
+            name: 'Detail',
+            component: Detail
+        }
+    ],
+    scrollBehavior(to, from, savedPosition) {
+        return {x: 0, y: 0}
     }
-]
-
-const router = new Router({
-    routes
 })
-
-export default router

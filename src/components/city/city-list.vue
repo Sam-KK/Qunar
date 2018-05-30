@@ -19,7 +19,7 @@
             </ul>
             <div class="character-item" v-for="(value, key) in cities" :key="key">
                 <h2 class="title">{{ key }}</h2>
-                <ul class="mp-list mp-tr4">
+                <ul class="mp-list">
                     <li v-for="v in value" :key="v.id" @click="selectCity(v.name)">
                         {{ v.name }}
                     </li>
@@ -74,21 +74,21 @@ export default {
         }
     }
     li {
+        z-index: 2;
+        position: relative;
         float: left;
         height: 44px;
         line-height: 44px;
         text-align: center;
-        a {
-            display: block;
-            color: @gray-dark;
-            .ellipsis();
-        }
+        color: @gray-dark;
+        .ellipsis();
     }
     .mp-list {
         z-index: 0;
         position: relative;
         clear: both;
         overflow: hidden;
+        background: #fff;
         &:before,
         &:after {
             position: absolute;
@@ -96,35 +96,34 @@ export default {
             height: 100%;
         }
         &:before {
+            width: 25%;
+            left: 25%;
             border-left: 1px solid #ddd;
             border-right: 1px solid #ddd;
         }
+        &:after {
+            left: 75%;
+            /*width: 25%;*/
+            height: 100%;
+            border-left: 1px solid #ddd;
+            border-right: 0;
+        }
         li {
+            width: 25%;
             margin-bottom: -1px;
             border-bottom: 1px solid #ddd;
+            .ellipsis();
         }
         &.mp-tr3 {
             &:before {
                 width: 33.33%;
                 left: 33.33%;
             }
-            li {
-                z-index: 10;
-                width: 33.33%;
-                border-bottom: 1px solid #ddd;
-            }
-        }
-        &.mp-tr4 {
-            &:before {
-                width: 25%;
-                left: 25%;
-            }
             &:after {
-                left: 75%;
-                border-left: 1px solid #ddd;
+                display: none;
             }
             li {
-                width: 25%;
+                width: 33.33%;
                 border-bottom: 1px solid #ddd;
             }
         }
