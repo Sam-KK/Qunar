@@ -30,7 +30,8 @@ export default {
     data() {
         return {
             swiperOption: {
-                slidesPerView: 3.5
+                slidesPerView: 3.5,
+                spaceBetween: 10
             }
         }
     },
@@ -64,8 +65,9 @@ export default {
         }
         .img-box {
             position: relative;
-            width: 100px;
-            height: 100px;
+            overflow: hidden;
+            padding-bottom: 100%;
+            height: 0;
             .tag-box {
                 position: absolute;
                 top: 0;
@@ -77,12 +79,12 @@ export default {
                 }
             }
             .swiper-img {
+                display: block;
                 width: 100%;
             }
         }
         .info {
-            margin-top: 12px;
-            width: 100px;
+            margin-top: 6px;
             .sight {
                 font-size: 12px;
                 text-align: center;

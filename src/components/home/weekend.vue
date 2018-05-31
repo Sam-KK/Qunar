@@ -36,12 +36,12 @@ export default {
         padding: 12px 14px;
         color: @gray-dark;
         font-size: 14px;
-        line-height: 40px;
     }
     .weekend-container {
         .weekend-item {
             position: relative;
             margin-bottom: 6px;
+            background: #fff;
             .full-link {
                 display: block;
                 .image-ready {
@@ -54,7 +54,7 @@ export default {
                     }
                 }
                 .product-info {
-                    padding: 10px;
+                    padding: 6px 10px 10px;
                     .name {
                         color: @gray-dark;
                         line-height: 28px;

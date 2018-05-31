@@ -33,7 +33,7 @@
                             </span>
                             <span class="like-address">{{ item.address }}</span>
                         </div>
-                        <div class="like-feature">
+                        <div class="like-feature" v-if="item.feature">
                             <p>{{ item.feature }}</p>
                         </div>
                     </div>
@@ -60,6 +60,8 @@ export default {
     @import "~styles/mixins.less";
 
     .recommend {
+        margin-top: 12px;
+        background: #fff;
         .title {
             padding: 12px 14px;
             .iconfont,
@@ -77,10 +79,12 @@ export default {
             padding: 0 12px;
             .like-item {
                 position: relative;
-                padding: 10px 0;
+                padding: 12px 0;
                 border-bottom: 1px solid #e0e0e0;
                 .full-link {
                     display: block;
+                    clear: both;
+                    overflow: hidden;
                     .like-img {
                         position: relative;
                         float: left;
