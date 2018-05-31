@@ -32,7 +32,20 @@ export default {
 </script>
 
 <style lang="less" scoped>
-.home-swiper .swiper-pagination-bullet {
+.home-swiper {
+    overflow: hidden;
+    height: 0;
+    padding-bottom: 42.89%;
+    .swiper-container {
+        .swiper-slide {
+            .swiper-img {
+                width: 100%
+            }
+        }
+    }
+}
+
+.swiper-pagination-bullet {
     width: 6px;
     height: 6px;
     background: #fff;
@@ -40,13 +53,4 @@ export default {
         background: #fff
     }
 }
-.home-swiper {
-    overflow: hidden;
-    height: 0;
-    padding-bottom: 42.89%;
-    .swiper-img {
-        width: 100%
-    }
-}
-
 </style>

@@ -11,6 +11,8 @@
             <v-recommend :list="recommendList"></v-recommend>
             <v-weekend :list="weekendList"></v-weekend>
         </div>
+
+        <v-footer></v-footer>
     </div>
 </template>
 
@@ -22,6 +24,7 @@ import quickEnter from '@/components/home/quick-enter'
 import hotSwiper from '@/components/home/hotWeek'
 import Recommend from '@/components/home/recommend'
 import weekend from '@/components/home/weekend'
+import footer from '@/components/footer/footer'
 export default {
     name: 'App',
     components: {
@@ -30,7 +33,8 @@ export default {
         'v-quickEnter': quickEnter,
         'v-hotWeek': hotSwiper,
         'v-recommend': Recommend,
-        'v-weekend': weekend
+        'v-weekend': weekend,
+        'v-footer': footer
     },
     data() {
         return {

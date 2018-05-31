@@ -11,7 +11,9 @@
                         <img
                             :src="item.imgUrl"
                             alt="">
-                        <span v-if="item.tag" class="tag">{{ item.tag  }}</span>
+                        <div class="tag">
+                            <img :src="item.likeTag" alt="">
+                        </div>
                     </div>
                     <div class="like-info">
                         <div class="like-title">{{ item.title }}</div>
@@ -98,17 +100,7 @@ export default {
                             position: absolute;
                             top: 0;
                             left: 0;
-                            padding: 2px 4px;
-                            font-size: 10px;
-                            color: #fff;
-                            background: #f00;
-                            border-radius: 0 0 8px 0;
-                            &.tom {
-                                background: #000;
-                            }
-                            &.any {
-                                background: #f00;
-                            }
+                            width: 52px;
                         }
                     }
                     .like-info {
