@@ -25,18 +25,46 @@
         <div class="ticket-container">
             <div class="ticket-group" v-for="(item, index) in list" :key="index">
                 <h3 class="ticket-type">
-                    <i class="iconfont icon-fanhui5"></i>
+                    <i class="iconfont icon-yichupiao"></i>
                     {{ item.name }}</h3>
                 <div class="ticket-list" v-for="(children, index) in item.children" :key="index">
-                    <div class="ticket-type-info">
+                    <div class="ticket-type-info" @click="showClick">
                         <h5 class="ticket-type-name">
                             {{ children.typeName }}
                         </h5>
-                        <div class="ticket-type-right">
+                        <div class="ticket-type-right" :class="{'active': defaultShow}">
                             <div class="price">
                                 ¥<em class="price-num">{{ children.price }}</em><span class="numword">起</span>
                             </div>
                             <i class="iconfont icon-down"></i>
+                        </div>
+                    </div>
+                    <div class="ticket-default" v-show="defaultShow">
+                        <div class="ticket-item">
+                            <div class="ticket-main">
+                                <h6 class="ticket-title">上海欢乐谷＋上海玛雅海滩水公园2日联票成人全日票</h6>
+                                <div class="ticket-light">
+                                    <i class="iconfont icon-shizhong-fill"></i>
+                                    <span>可订6月16日</span>
+                                </div>
+                                <div class="ticket-labelcon">
+                                    <span>条件退</span>
+                                </div>
+                                <div class="ticket-supplier">
+                                    <span>福建金桥国旅</span>
+                                    <span>|</span>
+                                    <span>预订须知</span>
+                                    <i class="iconfont icon-right"></i>
+                                </div>
+                            </div>
+                            <div class="ticket-side">
+                                <div class="side-wrap">
+                                    <div class="price">
+                                        ¥<span class="price-num">230</span>
+                                    </div>
+                                    <div class="ticket-btn">预订</div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -55,6 +83,7 @@ export default {
     data() {
         return {
             list: [],
+            defaultShow: false,
             showGallery: false,
             showAbsolute: true,
             opacityStyle: {
@@ -94,6 +123,9 @@ export default {
             } else {
                 this.showAbsolute = true
             }
+        },
+        showClick() {
+            this.defaultShow = !this.defaultShow
         }
     },
     mounted() {
@@ -199,6 +231,11 @@ export default {
                     font-size: 16px;
                     line-height: 44px;
                     border-bottom: 1px solid #dadada;
+                    .iconfont {
+                        margin-right: 4px;
+                        color: #1ba9ba;
+                        font-size: 18px;
+                    }
                 }
                 .ticket-list {
                     .ticket-type-info {
@@ -218,6 +255,11 @@ export default {
                             position: absolute;
                             top: 12px;
                             right: 10px;
+                            &.active {
+                                .iconfont {
+                                    transform: rotate(180deg);
+                                }
+                            }
                             .price {
                                 color: #ff9800;
                                 font-size: 12px;
@@ -231,6 +273,91 @@ export default {
                             .iconfont {
                                 margin-top: 2px;
                                 color: #bbb;
+                                transition: all .2s;
+                            }
+                        }
+                    }
+                    .ticket-default {
+                        background: #f5f5f5;
+                        .ticket-item {
+                            display: flex;
+                            box-sizing: border-box;
+                            padding: 10px;
+                            width: 100%;
+                            .ticket-main {
+                                flex: 2.92;
+                                .ticket-title {
+                                    color: #616161;
+                                    font-size: .14px;
+                                    line-height: 20px;
+                                }
+                                .ticket-light {
+                                    overflow: hidden;
+                                    .iconfont,
+                                    span {
+                                        display: inline-block;
+                                        vertical-align: middle;
+                                    }
+                                    .iconfont {
+                                        font-size: 14px;
+                                        color: #1ba9ba;
+                                    }
+                                    span {
+                                        color: #616161;
+                                        font-size: 12px;
+                                        line-height: 16px;
+                                        white-space: nowrap;
+                                    }
+                                }
+                                .ticket-labelcon {
+                                    span {
+                                        display: inline-block;
+                                        margin-top: 4px;
+                                        padding: 2px;
+                                        color: #00afc7;
+                                        font-size: 10px;
+                                        white-space: nowrap;
+                                        border: 1px solid #a5e4ec;
+                                    }
+                                }
+                                .ticket-supplier {
+                                    margin-top: 4px;
+                                    font-size: 12px;
+                                    color: #616161;
+                                }
+                            }
+                            .ticket-side {
+                                display: flex;
+                                align-items: center;
+                                flex: 1;
+                                .side-wrap {
+                                    box-sizing: border-box;
+                                    display: block;
+                                    width: 100%;
+                                    padding-left: 10px;
+                                }
+                                .price {
+                                    display: block;
+                                    color: #ff9800;
+                                    text-align: center;
+                                    .price-num {
+                                        font-size: 20px;
+                                    }
+                                }
+                                .ticket-btn {
+                                    display: block;
+                                    height: 30px;
+                                    color: #fff;
+                                    font-size: 14px;
+                                    text-align: center;
+                                    line-height: 30px;
+                                    border-radius: 4px;
+                                    background-image: -webkit-gradient(linear,left top,right bottom,from(#ffab1e),to(#ff8c12));
+                                    background-image: -webkit-linear-gradient(-60deg,#ffab1e 37%,#ff8c12 100%);
+                                    background-image: -moz-linear-gradient(-60deg,#ffab1e 37%,#ff8c12 100%);
+                                    background-image: -o-linear-gradient(-60deg,#ffab1e 37%,#ff8c12 100%);
+                                    background-image: linear-gradient(130deg,#ffab1e 37%,#ff8c12 100%);
+                                }
                             }
                         }
                     }
