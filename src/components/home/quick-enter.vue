@@ -3,10 +3,8 @@
         <swiper :options="swiperOption">
             <swiper-slide v-for="page in pages" :key="page.index">
                 <div class="category-item" v-for="item in page" :key="item.id">
-                    <a href="">
-                        <img class="enter-icon" :src="item.imgUrl" alt="">
-                        <p class="keywords">{{ item.keywords }}</p>
-                    </a>
+                    <img class="enter-icon" :src="item.imgUrl" alt="">
+                    <p class="keywords">{{ item.keywords }}</p>
                 </div>
             </swiper-slide>
             <div class="swiper-pagination" slot="pagination"></div>

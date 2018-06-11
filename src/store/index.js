@@ -2,7 +2,7 @@
  * @Author: xianghong.yan
  * @Date:   2018-05-23 17:19:04
  * @Last Modified by:   xianghong.yan
- * @Last Modified time: 2018-05-24 09:44:31
+ * @Last Modified time: 2018-06-08 14:12:19
  */
 
 import Vue from 'vue'
@@ -27,7 +27,6 @@ const store = new Vuex.Store({
     actions: {
         changeCity(context, city) {
             context.commit('changeCity', city)
-            // console.log(city)
         }
     },
     mutations: {
