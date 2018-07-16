@@ -32,6 +32,7 @@ export default {
 
     .header {
         display: flex;
+        align-items: center;
         color: #fff;
         background: @headerColor;
         .home-return {
@@ -47,8 +48,7 @@ export default {
         .home-input {
             flex: 1;
             box-flex: 1;
-            margin: 7px 0;
-            padding-left: 10px;
+            padding: 0 10px;
             height: 30px;
             line-height: 30px;
             color: #e4e7ea;
