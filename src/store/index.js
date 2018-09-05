@@ -51,31 +51,10 @@ Vue.use(Vuex)
 // })
 
 const store = new Vuex.Store({
-<<<<<<< HEAD
     actions,
     getters,
     state,
     mutations
-=======
-    state: {
-        city: defaultCity
-    },
-    actions: {
-        changeCity(context, city) {
-            context.commit('changeCity', city)
-        }
-    },
-    mutations: {
-        changeCity(state, city) {
-            state.city = city
-            try {
-                localStorage.city = city
-            } catch (e) {
-
-            }
-        }
-    }
->>>>>>> 2e07d4b7082eb8c6c6457a688cae422f91535fcc
 })
 
 export default store
