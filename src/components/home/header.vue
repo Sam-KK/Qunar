@@ -4,10 +4,10 @@
             <i class="iconfont icon-fanhui"></i>
         </div>
         <div class="home-input">
-            <a class="home-link" href="">
+            <!-- <a class="home-link" href=""> -->
                 <i class="iconfont icon-search"></i>
                 <span class="placeholder">输入城市/景点/游玩主题</span>
-            </a>
+            <!-- </a> -->
         </div>
         <!--<div class="home-city">-->
             <router-link tag="div" to="/city" class="home-city">
@@ -32,6 +32,7 @@ export default {
 
     .header {
         display: flex;
+        align-items: center;
         color: #fff;
         background: @headerColor;
         .home-return {
@@ -47,20 +48,23 @@ export default {
         .home-input {
             flex: 1;
             box-flex: 1;
+            padding: 0 10px;
             height: 30px;
             line-height: 30px;
-            margin: 7px 0;
-            padding-left: 10px;
+            color: #e4e7ea;
             background: #fff;
             border-radius: 4px;
-            .home-link {
-                color: #e4e7ea;
-            }
         }
         .home-city {
-            line-height: 44px;
             padding: 0 12px;
+            min-width: 48px;
+            line-height: 44px;
             color: #fff;
+            span,
+            .iconfont  {
+                display: inline-block;
+                vertical-align: middle;
+            }
         }
     }
 </style>

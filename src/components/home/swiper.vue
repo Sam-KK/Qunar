@@ -1,8 +1,8 @@
 <template>
-    <div class="home-swiper">
+    <div class="home-swiper" id="home-swiper">
         <swiper :options="swiperOption" v-if="showSwiper">
             <swiper-slide v-for="item in list" :key="item.id">
-                <img class="swiper-img" :src="item.imgUrl" alt="">
+                <img class="swiper-img" :src="item.imgUrl" width="100%" alt="">
             </swiper-slide>
             <div class="swiper-pagination"  slot="pagination"></div>
         </swiper>
@@ -32,23 +32,16 @@ export default {
 </script>
 
 <style lang="less" scoped>
-.home-swiper {
-    overflow: hidden;
+#home-swiper /deep/ .swiper-container {
     height: 0;
     padding-bottom: 42.89%;
-    .swiper-container {
-        .swiper-slide {
-            .swiper-img {
-                width: 100%
-            }
-        }
-    }
 }
 
-.swiper-pagination-bullet {
+#home-swiper /deep/ .swiper-pagination-bullet {
+    opacity: 1;
     width: 6px;
     height: 6px;
-    background: #fff;
+    background: rgb(0, 188, 212);
     &.swiper-pagination-bullet-active {
         background: #fff
     }
