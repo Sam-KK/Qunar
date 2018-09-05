@@ -3,7 +3,8 @@
         <div class="city-container">
             <h2 class="title">当前城市</h2>
             <ul class="current-list">
-                <li>{{ this.$store.state.city }}</li>
+                <!-- <li>{{ this.$store.state.city }}</li> -->
+                <li>{{ city }}</li>
             </ul>
             <h2 class="title">热门城市</h2>
             <ul class="mp-list mp-tr3">
@@ -31,11 +32,15 @@
 
 <script>
 import BScroll from 'better-scroll'
+import {mapGetters} from 'vuex'
 export default {
     name: 'city-list',
     props: {
         cities: Object,
         hot: Array
+    },
+    computed: {
+        ...mapGetters(['city'])
     },
     methods: {
         selectCity(city) {
