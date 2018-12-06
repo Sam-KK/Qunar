@@ -37,6 +37,7 @@ export default {
                 }
                 pages[page].push(item)
             })
+            console.info(pages)
             return pages
         }
     }
